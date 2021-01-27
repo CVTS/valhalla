@@ -92,6 +92,7 @@ jobs:
       - run: |
           # NOTE: -Werror disabled in CI, as we currently have >4k warnings.
           cd build \
+            && apt-get update && apt-get install --assume-yes lld \
             && cmake .. -DCMAKE_BUILD_TYPE=Debug -DENABLE_COVERAGE=On -DCPACK_GENERATOR=DEB \
                 -DENABLE_COMPILER_WARNINGS=On -DENABLE_WERROR=Off -DCMAKE_EXPORT_COMPILE_COMMANDS=On \
                 -DCMAKE_CXX_FLAGS="-fuse-ld=lld" \
