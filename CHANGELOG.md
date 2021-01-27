@@ -4,6 +4,7 @@
 * **Bug Fix**
 
 * **Enhancement**
+  * nit: Links debug build with lld [#2813](https://github.com/valhalla/valhalla/pull/2813)
 
 ## Release Date: 2021-01-25 Valhalla 3.1.0
 * **Removed**
